@@ -21,7 +21,34 @@
       <div id="modal">
 
         <!-- Inner content for the popup. -->
-        <div class="modal-content"><p>Just some text to make sure this works...</p></div>
+        <div class="modal-content">
+          <div class="modal-header"><h2>Password Options</h2></div>
+          <hr>
+          <form>
+            <h5>Length</h5>
+            <label for="length">8</label>
+            <input type="range" id="length" name="length" min="8" max="128">
+            <label for="length">128</label>
+            <br>
+            <h5>Character Types</h5>
+            <input type="checkbox" id="lowercase" name="lowercase" value="Lower Case">
+            <label for="lowercase">Lower Case</label>
+            <br>
+            <input type="checkbox" id="uppercase" name="uppercase" value="Upper Case">
+            <label for="uppercase">Upper Case</label>
+            <br>
+            <input type="checkbox" id="numeric" name="numeric" value="Numeric">
+            <label for="numeric">Numeric</label>
+            <br>
+            <input type="checkbox" id="special" name="special" value="Special">
+            <label for="special">Special Characters</label>
+          </form>
+          <hr>
+          <div class="modal-footer">
+            <button id="cancel">Cancel</button>
+            <button id="submit">Submit</button>
+          </div>
+        </div>
       </div>
 
       <!-- Header. -->
