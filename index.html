@@ -1,21 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- Meta information. -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
     <title>Password Generator</title>
+
+    <!-- Imports. -->
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
+    <!-- Wrapper. -->
     <div class="wrapper">
+
+      <!-- Creating a modal for the popup. -->
+      <div id="modal">
+
+        <!-- Inner content for the popup. -->
+        <div class="modal-content"><p>Just some text to make sure this works...</p></div>
+      </div>
+
+      <!-- Header. -->
       <header>
         <h1>Password Generator</h1>
       </header>
+
+      <!-- The main content area. -->
       <div class="card">
+
+        <!-- Card header. -->
         <div class="card-header">
           <h2>Generate a Password</h2>
         </div>
+
+        <!-- Card body. -->
         <div class="card-body">
           <textarea
             readonly
@@ -24,11 +46,16 @@
             aria-label="Generated Password"
           ></textarea>
         </div>
+
+        <!-- Card footer. -->
         <div class="card-footer">
           <button id="generate" class="btn">Generate Password</button>
         </div>
       </div>
+
     </div>
+
+    <!-- Adding scripts -->
     <script src="script.js"></script>
   </body>
 </html>
