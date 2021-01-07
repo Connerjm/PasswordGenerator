@@ -17,12 +17,12 @@ The password can include special characters following guidelines from [OWASP Fon
 
 The Acceptance Criteria is as follows.
 
-- [ ] Generates a new secure password.
-- [ ] Prompts the user for password criteria.
-- [ ] Choose length between 8 and 128.
-- [ ] Choose types from Lower Case, Upper Case, Numeric, and Special Characters.
+- [x] Generates a new secure password.
+- [x] Prompts the user for password criteria.
+- [x] Choose length between 8 and 128.
+- [x] Choose types from Lower Case, Upper Case, Numeric, and Special Characters.
 - [ ] Validates the users choices.
-- [ ] It shows the generated password in the center box.
+- [x] It shows the generated password in the center box.
 
 ## Technologies
 
@@ -39,10 +39,19 @@ Project is created with:
 
 ## Images
 
-- TODO
+The initial state of the application.
+![Initial](Assets/Images/Initial.png)
+
+The popup that askes the user for the password options.
+![Popup](Assets/Images/Popup.png)
+
+The generated password.
+![Generated](Assets/Images/Generated.png)
 
 ## Issues
 
+None at present.
+
 ## To Do
 
-- TODO
+- Validate user input?
