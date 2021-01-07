@@ -1,24 +1,9 @@
-// // Assignment Code
-// var generateBtn = document.querySelector("#generate");
-
-// // Write password to the #password input
-// function writePassword()
-// {
-//   var password = generatePassword();
-//   var passwordText = document.querySelector("#password");
-
-//   passwordText.value = password;
-
-// }
-
-// // Add event listener to generate button
-// generateBtn.addEventListener("click", writePassword);
-
 // Declaring the variables.
 
 var passwordBox = document.getElementById("password");
 var modal = document.getElementById("modal");
 var generateBtn = document.getElementById("generate");
+var copyBtn = document.getElementById("copy");
 
 var length = document.getElementById("length");
 var lowerCase = document.getElementById("lowercase");
@@ -29,7 +14,7 @@ var special = document.getElementById("special");
 var cancel = document.getElementById("cancel");
 var submit = document.getElementById("submit");
 
-//Declaring arrays of different characters.s
+//Declaring arrays of different character types.
 
 var lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var upper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
@@ -44,7 +29,7 @@ function close()
   modal.style.display = "none";
 }
 
-// Sets all the options to default.
+// Sets all the options in the popup to default.
 function reset()
 {
   close();
@@ -78,7 +63,7 @@ function buildPassword()
     //Else go and get a character to match the chosen length.
     for (var i = 0; i < length.value; i++)
     {
-      chance = Math.random(); //I use a random to also give the different types of characters different chances of showing up.
+      chance = Math.random(); //I use a random() to also give the different types of characters different chances of showing up.
       if (chance < 0.5 && lowerCase.checked)
         thepassword += getChar(lower);
       else if (chance < 0.7 && upperCase.checked)
@@ -102,10 +87,18 @@ function generatePassword()
   reset();
 }
 
+// Nifty function to copy the new password to the clipboard for pasting and using.
+
+
 // Attaching functions to listeners.
 
 cancel.onclick = reset;
 submit.onclick = generatePassword;
+
+copyBtn.onclick = function ()
+{
+  navigator.clipboard.writeText(passwordBox.value);
+}
 
 // Open the popup when the button is clicked.
 generateBtn.onclick = function ()
