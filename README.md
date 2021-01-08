@@ -55,3 +55,4 @@ None at present.
 ## To Do
 
 - Validate user input?
+- Add the option to use words instead of just characters?
