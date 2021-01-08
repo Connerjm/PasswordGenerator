@@ -56,3 +56,4 @@ None at present.
 
 - Validate user input?
 - Add the option to use words instead of just characters?
+- Switch div tags to things that make more sense, like dialog.

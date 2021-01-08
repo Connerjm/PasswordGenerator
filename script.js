@@ -62,7 +62,7 @@ function buildPassword()
   {
     //Else go and get a character to match the chosen length.
     for (var i = 0; i < length.value; i++)
-    {
+    { // Could use nested switch statements or if statements to put the chances inside the toggle check or vise versa.
       chance = Math.random(); //I use a random() to also give the different types of characters different chances of showing up.
       if (chance < 0.5 && lowerCase.checked)
         thepassword += getChar(lower);
